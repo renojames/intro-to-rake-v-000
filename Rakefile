@@ -26,6 +26,7 @@ namespace :db do
   desc 'creates a table and migrates it to the db'
   task :migrate => :environment do
     Student.create_table
+    puts "The table has been created and migrated"
   end
 
   desc 'seed the bd with dummy data'

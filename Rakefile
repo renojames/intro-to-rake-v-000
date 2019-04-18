@@ -13,7 +13,7 @@ namespace :greeting do
 end
 
 desc 'drop into the Pry console'
-task :console => :environemnt do
+task :console => :environment do
   Pry.start
 end
 

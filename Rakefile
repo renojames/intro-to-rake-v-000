@@ -1,3 +1,4 @@
+require_relative './config/environemnt.rb'
 
 namespace :greeting do
   desc 'outputs hello to the terminal'

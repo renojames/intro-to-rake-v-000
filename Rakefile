@@ -31,5 +31,6 @@ namespace :db do
   desc 'seed the bd with dummy data'
   task :seed do
     require_relative './db/seeds'
+    puts "The db has been seeded."
   end
 end

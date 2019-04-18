@@ -1,4 +1,5 @@
 
+
 namespace :greeting do
   desc 'outputs hello to the terminal'
   task :hello do
@@ -12,7 +13,7 @@ namespace :greeting do
 end
 
 desc 'drop into the Pry console'
-task :console do
+task :console => :environment do
   Pry.start
 end
 
@@ -25,10 +26,12 @@ namespace :db do
   desc 'creates a table and migrates it to the db'
   task :migrate => :environment do
     Student.create_table
+    puts "The table has been created and migrated"
   end
 
   desc 'seed the bd with dummy data'
   task :seed do
     require_relative './db/seeds'
+    puts "The db has been seeded."
   end
 end
